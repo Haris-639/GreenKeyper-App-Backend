@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "2dd67e12-5375-4786-abc7-c777baf9bba8",
+		"name": "GreenKeyper Mob API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47141073",
+		"_collection_link": "https://docking-module-astronaut-57951737-1469822.postman.co/workspace/Haris-Usman's-Workspace~6903ef20-a9b0-4eba-8ada-ef2c9daabf55/collection/47141073-2dd67e12-5375-4786-abc7-c777baf9bba8?action=share&source=collection_link&creator=47141073"
+	},
+	"item": [
+		{
+			"name": "Mobile Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Subhan\",\r\n  \"email\": \"subhan@example.com\",\r\n  \"password\": \"subhan12345\",\r\n  \"phone_no\": \"03147141714\",\r\n  \"role_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mobile/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mobile Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"haris2@gmail.com\",\r\n  \"password\": \"smoothoperator55\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mobile/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Mobile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInJvbGUiOjIsImlhdCI6MTc1NjYyNDIyOCwiZXhwIjoxNzU2NjI1MTI4fQ.2H-YfTMmqQlXztPaEG0P-ZuX7_3v9p48bfQNmrCU8o4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mobile Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mobile/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone_no\": \"03110022334\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mobile/auth/update/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"auth",
+						"update",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mobile/auth/delete/8\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"auth",
+						"delete",
+						"8\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": 13,\r\n  \"vehicle_num\": \"ATE-797\",\r\n  \"make\": \"Ford\",\r\n  \"model\": \"F-550\",\r\n  \"year\": 2015\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mobile/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vehicle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/web/vehicles/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"web",
+						"vehicles",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Vehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mobile/vehicles/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"vehicles",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vehicle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": 10,\r\n  \"is_active\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/web/vehicles/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"web",
+						"vehicles",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Checklist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInJvbGUiOjEsImlhdCI6MTc1Njc0MTAxNCwiZXhwIjoxNzU2NzQxOTE0fQ.GnMRWkKQ0q3Fz1Zl-J9M2BVOfSFVgrfIDNCmaxaZU2A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"created_by\": 6,\r\n  \"vehicle_id\": 7,\r\n  \"checklist_name\": \"Post Trip Inspection\",\r\n  \"type\": \"Maintenance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mobile/checklists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"checklists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Checklist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInJvbGUiOjEsImlhdCI6MTc1Njc0MTAxNCwiZXhwIjoxNzU2NzQxOTE0fQ.GnMRWkKQ0q3Fz1Zl-J9M2BVOfSFVgrfIDNCmaxaZU2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/mobile/checklists/vehicle/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"checklists",
+						"vehicle",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Checklist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInJvbGUiOjEsImlhdCI6MTc1Njc0MTAxNCwiZXhwIjoxNzU2NzQxOTE0fQ.GnMRWkKQ0q3Fz1Zl-J9M2BVOfSFVgrfIDNCmaxaZU2A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"created_by\": 9,\r\n  \"checklist_name\": \"Pre Trip Inspection\",\r\n  \"type\": \"Safety\",\r\n  \"is_active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mobile/checklists/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"checklists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Checklist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInJvbGUiOjEsImlhdCI6MTc1Njc0MTAxNCwiZXhwIjoxNzU2NzQxOTE0fQ.GnMRWkKQ0q3Fz1Zl-J9M2BVOfSFVgrfIDNCmaxaZU2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/mobile/checklists/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mobile",
+						"checklists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
